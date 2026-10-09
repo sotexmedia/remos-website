@@ -1,25 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
 
-  /* The REM.OS app's dark navy palette, so the site and the app match. */
-  --color-chrome: #04070f;
-  --color-canvas: #070c18;
-  --color-surface: #0d1527;
+  /* Deep midnight navy, lightest last. */
+  --color-night: #071426;
+  --color-deep: #0b1d35;
+  --color-card: #102540;
+  --color-raised: #163352;
 
-  --color-ink: #e7edf8;
-  --color-ink-soft: #b3bfd6;
-  --color-muted: #7f8ca8;
-  --color-line: #1a2540;
+  --color-accent: #438bff;
+  --color-accent-hover: #70aaff;
 
-  --color-good: #34d399;
-  --color-good-soft: #10b98124;
-  --color-warn: #fbbf24;
-  --color-warn-soft: #f59e0b24;
-  --color-accent: #a78bfa;
-  --color-accent-soft: #8b5cf626;
-  --color-info: #60a5fa;
+  --color-fg: #f8fafc;
+  --color-fg-muted: #9dafc5;
+  --color-border: #263b56;
+
+  /* Status colors used inside product mockups. */
+  --color-ok: #34d399;
+  --color-pending: #fbbf24;
+  --color-violet: #a78bfa;
+  --color-sky: #60a5fa;
 }
 
 @layer base {
@@ -27,15 +29,41 @@
     -webkit-text-size-adjust: 100%;
     color-scheme: dark;
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
   body {
-    background: var(--color-chrome);
-    color: var(--color-ink);
+    background: var(--color-night);
+    color: var(--color-fg);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: #438bff55;
   }
   :focus-visible {
-    outline: 2px solid #2f54ff;
-    outline-offset: 2px;
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 6px;
   }
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(100deg, #f8fafc 0%, #9cc3ff 45%, #438bff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, #ffffff08 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff08 1px, transparent 1px);
+  background-size: 64px 64px;
 }
