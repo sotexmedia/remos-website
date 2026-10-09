@@ -1,3 +1,4 @@
+import { AiSection } from "@/components/sections/ai";
 import { Audience } from "@/components/sections/audience";
 import { Devices } from "@/components/sections/devices";
 import { Faq } from "@/components/sections/faq";
@@ -45,6 +46,7 @@ export default function Home() {
         <SocialProof />
         <ValueProps />
         <FeatureShowcase />
+        <AiSection />
         <HowItWorks />
         <Devices />
         <Audience />

@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarClock, CalendarPlus, CircleDollarSign, Send } from "lucide-react";
+import { ArrowRight, CalendarClock, CalendarPlus, CircleDollarSign, Send } from "lucide-react";
 import { motion } from "motion/react";
 import { DashboardMockup, Toast } from "@/components/mockups/dashboard";
 import { BrowserFrame } from "@/components/mockups/frames";
@@ -29,7 +29,16 @@ export function Hero() {
 
       <Container className="relative">
         <div className="mx-auto max-w-4xl text-center">
-          <motion.p {...rise(0)} className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-accent-hover sm:text-xs">
+          <motion.a
+            {...rise(0)}
+            href="#ai"
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-violet/30 bg-violet/10 py-1 pl-1 pr-3 text-xs text-fg/90 transition-colors hover:border-violet/60"
+          >
+            <span className="rounded-full bg-violet/25 px-2 py-0.5 font-medium text-violet">New</span>
+            Connect Rem.os to ChatGPT, Claude and any AI assistant
+            <ArrowRight className="size-3.5 text-fg-muted" aria-hidden />
+          </motion.a>
+          <motion.p {...rise(0.04)} className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-accent-hover sm:text-xs">
             The operating system for real estate media
           </motion.p>
           <motion.h1

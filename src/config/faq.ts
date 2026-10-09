@@ -30,6 +30,10 @@ export const faqs = [
     a: "Yes. Rem.os creates numbered invoices with your logo and terms, takes card payments through Stripe, tracks what's paid and owed, and sends reminders for overdue invoices.",
   },
   {
+    q: "Can I use Rem.os with ChatGPT, Claude or other AI tools?",
+    a: "Yes. Rem.os connects to any AI assistant that supports the Model Context Protocol, including Claude, ChatGPT and Cursor. Create a key in Settings, paste the connector link into your assistant, and ask it to check availability, book or reschedule shoots, look up clients or track invoices. Keys can be read-only, can be revoked any time, and every change is logged. Automation tools like n8n, Zapier and Make can use the same actions through the REST API.",
+  },
+  {
     q: "How do I get started?",
     a: "Book a demo. We'll walk through how you work today and show you how your services, booking page, schedule and delivery would look in Rem.os.",
   },
