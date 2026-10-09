@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* The REM.OS app's dark navy palette, so the site and the app match. */
+  --color-chrome: #04070f;
+  --color-canvas: #070c18;
+  --color-surface: #0d1527;
+
+  --color-ink: #e7edf8;
+  --color-ink-soft: #b3bfd6;
+  --color-muted: #7f8ca8;
+  --color-line: #1a2540;
+
+  --color-good: #34d399;
+  --color-good-soft: #10b98124;
+  --color-warn: #fbbf24;
+  --color-warn-soft: #f59e0b24;
+  --color-accent: #a78bfa;
+  --color-accent-soft: #8b5cf626;
+  --color-info: #60a5fa;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--color-chrome);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid #2f54ff;
+    outline-offset: 2px;
+  }
+}
