@@ -18,12 +18,10 @@ type ButtonProps = {
 
 /** Every call to action is a link; destinations come from src/config/site.ts. */
 export function Button({ href, variant = "primary", size = "md", arrow, className, children }: ButtonProps) {
-  const external = /^https?:/.test(href);
   const Tag = href.startsWith("/") ? Link : "a";
   return (
     <Tag
       href={href}
-      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={cn(
         "group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-all duration-200",
         size === "md" ? "h-9 px-4 text-sm" : "h-12 px-6 text-[15px]",

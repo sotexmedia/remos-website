@@ -35,6 +35,6 @@ export const faqs = [
   },
   {
     q: "How do I get started?",
-    a: "Book a demo. We'll walk through how you work today and show you how your services, booking page, schedule and delivery would look in Rem.os.",
+    a: "Click Get Started to create your account, then add your services and team and share your booking page. Prefer a walkthrough first? Book a demo and we'll show you how Rem.os would work for your business.",
   },
 ];

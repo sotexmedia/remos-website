@@ -96,7 +96,7 @@ function PlanCard({ plan, billing, delay }: { plan: Plan; billing: Billing; dela
         )}
       </div>
       <Button href={href} variant={plan.featured ? "primary" : "secondary"} className="mt-8 h-11 w-full">
-        {price === null && plan.cta === "Get Started" ? "Book a Demo" : plan.cta}
+        {plan.cta}
       </Button>
       <ul className="mt-8 space-y-3 border-t border-border/60 pt-8">
         {plan.features.map((f) => (

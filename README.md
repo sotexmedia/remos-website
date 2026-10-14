@@ -36,10 +36,10 @@ redeploy. See `.env.example`.
 
 | Variable | What it does |
 |---|---|
-| `NEXT_PUBLIC_APP_URL` | The app's address. "Log In" goes to its `/login` (hidden until set). |
+| `NEXT_PUBLIC_APP_URL` | The app's address (default `https://app.remos.media`). "Log In" goes to its `/login`. |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Where "Book a Demo" emails, and the Contact link. |
 | `NEXT_PUBLIC_DEMO_URL` | Optional scheduling link (Calendly, Cal.com, ...) for "Book a Demo" instead of email. |
-| `NEXT_PUBLIC_GET_STARTED_URL` | Optional sign-up page for "Get Started". Until set it does the same as "Book a Demo". |
+| `NEXT_PUBLIC_GET_STARTED_URL` | Optional override for "Get Started". Defaults to the sign-up page, `https://app.remos.media/start`. |
 | `NEXT_PUBLIC_SITE_URL` | This site's address once it has a domain (for link previews and the sitemap). |
 | `NEXT_PUBLIC_INSTAGRAM_URL`, `_LINKEDIN_URL`, `_YOUTUBE_URL`, `_X_URL` | Footer social icons; empty ones are hidden. |
 

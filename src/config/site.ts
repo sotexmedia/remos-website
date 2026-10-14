@@ -6,7 +6,7 @@
 // into the browser bundle when they are written out literally like this.
 const clean = (value: string | undefined) => (value ?? "").trim();
 
-const appUrl = clean(process.env.NEXT_PUBLIC_APP_URL).replace(/\/+$/, "");
+const appUrl = (clean(process.env.NEXT_PUBLIC_APP_URL) || "https://app.remos.media").replace(/\/+$/, "");
 const contactEmail = clean(process.env.NEXT_PUBLIC_CONTACT_EMAIL);
 
 const demoUrl =
@@ -28,11 +28,11 @@ export const site = {
 
   links: {
     /** "Log In": the app's sign-in page. */
-    login: appUrl ? `${appUrl}/login` : null,
+    login: `${appUrl}/login`,
     /** "Book a Demo": a scheduling link, else email, else the contact section. */
     demo: demoUrl,
-    /** "Get Started": a sign-up link when there is one, else the same as a demo. */
-    getStarted: clean(process.env.NEXT_PUBLIC_GET_STARTED_URL) || demoUrl,
+    /** "Get Started": the app's sign-up page. */
+    getStarted: clean(process.env.NEXT_PUBLIC_GET_STARTED_URL) || "https://app.remos.media/start",
     contact: contactEmail ? `mailto:${contactEmail}` : "#contact",
   },
 
